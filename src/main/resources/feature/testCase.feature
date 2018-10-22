@@ -15,14 +15,14 @@ Funcionalidade: Autenticação e login no facebook
     Entao a Api deve retornar status code 190
 
   Cenario: Realizando postagem do usuario
-    Dado que o usuario tenha o token de acesso
+    Dado que o usuario tenha o token de acess
     Quando o usuario realiza um post pela url "https://graph.facebook.com/me/feed"
     E com a mensagem "{\"message\":\"Olá Pessoal\"}"
     Entao  Api deve retornar status code 200
     E salvar o id do post
 
-  Cenario: Não realizar postagem do usuario por falta de token
-    Dado que o usuario não tenha a autenticação do token
+  Cenario:  realizar postagem do usuario por falta de token
+    Dado que o usuario nao tenha a autenticao do token
     Quando o usuario realiza um post pela url "https://graph.facebook.com/me/feed"
     E com a mensagem "{\"message\":\"Olá Pessoal\"}"
     Entao  Api deve retornar status code 2500
