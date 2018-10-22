@@ -8,7 +8,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/main/resources/testCase.feature",
+        features = "src/main/resources/feature/testCase.feature",
         glue = "Steps",
         tags = "~@ignore",
         plugin = "pretty",
