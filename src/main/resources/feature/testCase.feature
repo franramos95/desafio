@@ -15,7 +15,7 @@ Funcionalidade: Autenticação e login no facebook
     Entao  Api deve retornar codigo de erro 190
 
   Cenario: Realizando postagem do usuario
-    Dado que o usuario tenha o token de acess
+    Dado que o usuario tenha o token de acesso
     Quando o usuario realiza um post pela url "https://graph.facebook.com/me/feed"
     E com a mensagem "{\"message\":\"Olá Pessoal\"}"
     Entao  Api deve retornar status code 200
