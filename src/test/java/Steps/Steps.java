@@ -41,52 +41,66 @@ public class Steps {
     }
 
 
-        @Entao("^a Api deve retornar status code (\\d+)$")
-        public void aApiDeveRetornarStatusCode (int code) throws Throwable {
-            Assert.assertEquals(code, response.getStatusCode());
-        }
-
-        @Dado("^que o usuario tenha o token de acesso incorreto$")
-        public void queOUsuarioTenhaOTokenDeAcessoIncorreto () throws Throwable {
-            this.token = "iAADnjyDqdaIBAC3AvvhmFH6nFQWHdugmap72rn2672mwAqmWHqD0h9ORqJJGgmYz6iQScShAzZAYjeuZA8P2OJ8rYAXx1Y2c97D6dVwSDyMub96rdoOg6RlpLVPJXAT3EbquGucw1SnPheqiWCMzlZBDaUZCrW452YTyrll75AZDZD";
-        }
-
-        @Quando("^o usuario realiza um post pela url \"([^\"]*)\"$")
-        public void oUsuarioRealizaUmPostPelaUrl (String url) throws Throwable {
-
-            this.url = url + "/?access_token=" + token;
-
-        }
-
-        @Quando("^com a mensagem \"(.*)\"$")
-        public void comAMensagemMessage (String mensagem) throws Throwable {
-
-            message = mensagem;
-
-        }
-
-        @Entao("^Api deve retornar status code (\\d+)$")
-        public void apiDeveRetornarStatusCode ( int code) throws Throwable {
-            response = given()
-                    .contentType(ContentType.JSON)
-                    .header("Token de Acesso", token)
-                    .body(message)
-                    .when()
-                    .post(url);
-
-            Assert.assertEquals(code, response.getStatusCode());
-        }
-
-        @Entao("^salvar o id do post$")
-        public void salvarOIdDoPost () throws Throwable {
-            idPost = response.getBody().path("id");
-                    //then().
-                    //contentType(ContentType.JSON).extract().path("id");
-
-        }
-
-        @Dado("^que o usuario nao tenha a autenticao do token$")
-        public void queOUsuarioNOTenhaAAutenticaODoToken () throws Throwable {
-            this.token = null;
-        }
+    @Entao("^a Api deve retornar status code (\\d+)$")
+    public void aApiDeveRetornarStatusCode(int code) throws Throwable {
+        Assert.assertEquals(code, response.getStatusCode());
     }
+
+    @Dado("^que o usuario tenha o token de acesso incorreto$")
+    public void queOUsuarioTenhaOTokenDeAcessoIncorreto() throws Throwable {
+        this.token = "iAADnjyDqdaIBAC3AvvhmFH6nFQWHdugmap72rn2672mwAqmWHqD0h9ORqJJGgmYz6iQScShAzZAYjeuZA8P2OJ8rYAXx1Y2c97D6dVwSDyMub96rdoOg6RlpLVPJXAT3EbquGucw1SnPheqiWCMzlZBDaUZCrW452YTyrll75AZDZD";
+    }
+
+    @Quando("^o usuario realiza um post pela url \"([^\"]*)\"$")
+    public void oUsuarioRealizaUmPostPelaUrl(String url) throws Throwable {
+
+        this.url = url + "/?access_token=" + token;
+
+    }
+
+    @Quando("^com a mensagem \"(.*)\"$")
+    public void comAMensagemMessage(String mensagem) throws Throwable {
+
+        message = mensagem;
+
+    }
+
+    @Entao("^Api deve retornar status code (\\d+)$")
+    public void apiDeveRetornarStatusCode(int code) throws Throwable {
+        response = given()
+                .contentType(ContentType.JSON)
+                .header("Token de Acesso", token)
+                .body(message)
+                .when()
+                .post(url);
+
+        Assert.assertEquals(code, response.getStatusCode());
+    }
+
+    @Entao("^salvar o id do post$")
+    public void salvarOIdDoPost() throws Throwable {
+        idPost = response.getBody().path("id");
+    }
+
+    @Dado("^que o usuario nao tenha a autenticao do token$")
+    public void queOUsuarioNOTenhaAAutenticaODoToken() throws Throwable {
+        this.token = null;
+    }
+
+    @Quando("^o usuario altera o post pela url \"(.*)\"$")
+    public void oUsuarioAlteraOPostPelaUrl(String url1) throws Throwable {
+        response = given()
+                .contentType(ContentType.JSON)
+                .header("Token de Acesso", token)
+                .body(message)
+                .when()
+                .post(url1);
+    }
+
+    @Entao("^Api deve retornar codigo de erro (\\d+)$")
+    public void apiDeveRetornarCodigoDeErro(int code) throws Throwable {
+        Assert.assertEquals(code, response.getBody().path("code"));
+
+    }
+
+}
