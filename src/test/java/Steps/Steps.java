@@ -13,10 +13,10 @@ import static io.restassured.RestAssured.given;
 public class Steps {
 
     private String token;
-    Response response;
-    String url;
-    String message;
-    String idPost;
+    private Response response;
+    private String url;
+    private String message;
+    private String idPost;
 
     @Dado("^que o usuario tenha o token de acesso$")
     public void queOUsuarioTenhaOTokenDeAcesso() throws Throwable {
