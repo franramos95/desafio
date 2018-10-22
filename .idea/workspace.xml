@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="de78d129-02a8-42b2-8d58-21ff1c26a26d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/feature/testCase.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/feature/testCase.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Steps/Steps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Steps/Steps.java" afterDir="false" />
-    </list>
+    <list default="true" id="de78d129-02a8-42b2-8d58-21ff1c26a26d" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -82,8 +78,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/Steps/Steps.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="916">
-              <caret line="101" column="67" lean-forward="true" selection-start-line="101" selection-start-column="67" selection-end-line="101" selection-end-column="67" />
+            <state relative-caret-position="132">
+              <caret line="43" column="54" selection-end-line="106" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -301,12 +297,12 @@
       <workItem from="1540148704047" duration="463000" />
       <workItem from="1540149223755" duration="1845000" />
       <workItem from="1540168573740" duration="1025000" />
-      <workItem from="1540205416796" duration="815000" />
+      <workItem from="1540205416796" duration="1139000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8516000" />
+    <option name="totallyTimeSpent" value="8840000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -319,7 +315,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="748" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27265862" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -411,8 +406,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Steps/Steps.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="916">
-          <caret line="101" column="67" lean-forward="true" selection-start-line="101" selection-start-column="67" selection-end-line="101" selection-end-column="67" />
+        <state relative-caret-position="132">
+          <caret line="43" column="54" selection-end-line="106" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
